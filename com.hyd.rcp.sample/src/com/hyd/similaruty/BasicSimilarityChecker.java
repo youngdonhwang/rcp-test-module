@@ -38,7 +38,7 @@ public class BasicSimilarityChecker implements SimilarityChecker {
 		System.out.println("2 : " + result);
 		result = basiccheck.check("000-0000-000", "111-1111-11111111111");
 		System.out.println("3 : " + result);
-		result = basiccheck.check("000-0000-000", "000-000-000");
+		result = basiccheck.check("000-0000-000", "000-000-000-000");
 		System.out.println("4 : " + result);
 		
 	}
