@@ -7,7 +7,7 @@
          point="org.eclipse.core.runtime.applications">
       <application>
          <run
-               class="com.hyd.rcp.test2.Application">
+               class="com.hyd.rcp.main.Application">
          </run>
       </application>
    </extension>
@@ -15,7 +15,7 @@
          point="org.eclipse.ui.perspectives">
       <perspective
             name="Perspective"
-            class="com.hyd.rcp.test2.Perspective"
+            class="com.hyd.rcp.main.Perspective"
             id="com.hyd.rcp.test2.perspective">
       </perspective>
    </extension>
@@ -24,13 +24,23 @@
       <view
             name="View"
             inject="true"
-            class="com.hyd.rcp.test2.View"
+            class="com.hyd.rcp.main.View"
             id="com.hyd.rcp.test2.view">
       </view>
       <view
             class="com.hyd.test.ViewSample"
             id="com.hyd.test.ViewSample"
-            name="New ViewPart">
+            name="ViewSample">
+      </view>
+      <view
+            class="com.hyd.test.ViewSample1"
+            id="com.hyd.test.ViewSample1"
+            name="Sample1">
+      </view>
+      <view
+            class="com.hyd.test.ViewSample2"
+            id="com.hyd.test.ViewSample2"
+            name="ViewSample2">
       </view>
    </extension>
    <extension
