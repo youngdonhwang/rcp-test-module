@@ -23,8 +23,8 @@ public class BasicSimilarityChecker implements SimilarityChecker {
 		else max_length = item2.length();
 		
 		ratio = (max_length - distance) / (double)max_length;
-		
 //		double ratio = (item1.length() - distance) / (double)item1.length();
+		
 		return (int) (ratio * 100);
 	}
 	
@@ -38,7 +38,7 @@ public class BasicSimilarityChecker implements SimilarityChecker {
 		System.out.println("2 : " + result);
 		result = basiccheck.check("000-0000-000", "111-1111-11111111111");
 		System.out.println("3 : " + result);
-		result = basiccheck.check("000-0000-000", "000-000-000-000");
+		result = basiccheck.check("000-0000-000", "000-000-000");
 		System.out.println("4 : " + result);
 		
 	}

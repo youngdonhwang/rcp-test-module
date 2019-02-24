@@ -5,7 +5,8 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 //import org.junit.jupiter.api.Test;
 import org.junit.Test;
-import com.hyd.rcp.test2.View;
+
+import com.hyd.rcp.main.View;
 
 public class ViewTest1 {
 

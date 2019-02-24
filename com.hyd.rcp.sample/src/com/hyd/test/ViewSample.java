@@ -8,11 +8,14 @@ import org.eclipse.ui.part.ViewPart;
 import org.eclipse.swt.custom.SashForm;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Text;
+import org.eclipse.swt.widgets.Tree;
+import org.eclipse.jface.viewers.TreeViewer;
+import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.layout.GridData;
 
 public class ViewSample extends ViewPart {
 
 	public static final String ID = "com.hyd.test.ViewSample"; //$NON-NLS-1$
-	private Text text;
 
 	public ViewSample() {
 	}
@@ -24,13 +27,18 @@ public class ViewSample extends ViewPart {
 	@Override
 	public void createPartControl(Composite parent) {
 		Composite container = new Composite(parent, SWT.NONE);
+		container.setLayout(new GridLayout(1, false));
 		
 		Button btnNewButton = new Button(container, SWT.NONE);
-		btnNewButton.setBounds(35, 37, 76, 25);
+		btnNewButton.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, true, false, 1, 1));
 		btnNewButton.setText("New Button");
 		
-		text = new Text(container, SWT.BORDER);
-		text.setBounds(38, 80, 271, 193);
+		TreeViewer treeViewer = new TreeViewer(container, SWT.BORDER);
+		Tree tree = treeViewer.getTree();
+		GridData gd_tree = new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1);
+		gd_tree.heightHint = 357;
+		gd_tree.widthHint = 581;
+		tree.setLayoutData(gd_tree);
 
 //		createActions();
 //		initializeToolBar();
